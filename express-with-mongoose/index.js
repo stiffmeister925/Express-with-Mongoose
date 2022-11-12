@@ -71,8 +71,7 @@ app.get("/users", async (req, res) => {
 
 app.get("/users/:userId/posts", CheckIfAuthorExist, async (req, res) => {
   const { userId } = req.params;
-  const { limit } = req.query;
-  const { offset } = req.query;
+  const { limit, offset } = req.query;
 
   // approach using find
   // res
